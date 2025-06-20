@@ -1,5 +1,7 @@
 
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import ContactDialog from "@/components/ContactDialog";
 
 const Header = () => {
   return (
@@ -16,11 +18,16 @@ const Header = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <Button 
-          className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
-        >
-          Contact
-        </Button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button 
+              className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
+            >
+              Contact
+            </Button>
+          </DialogTrigger>
+          <ContactDialog />
+        </Dialog>
       </div>
     </header>
   );
