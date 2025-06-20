@@ -1,8 +1,18 @@
 
 import PortfolioCard from "@/components/PortfolioCard";
 
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  buttonText: string;
+  type: "mobile" | "desktop";
+  brand?: string;
+}
+
 const Portfolio = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "Discover Your Style",
