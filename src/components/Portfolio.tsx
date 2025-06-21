@@ -1,3 +1,4 @@
+import PortfolioCard from "./PortfolioCard";
 
 interface Project {
   id: number;
